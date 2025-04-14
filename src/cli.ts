@@ -5,13 +5,14 @@ import { signZXP } from "./commands/sign";
 import { copyZXPFile } from "./commands/copy";
 import { copySourceFolder } from "./commands/copyFolder";
 import { CommandOptions } from "./types";
+import { version } from "../package.json";
 
 const program = new Command();
 
 program
   .name("zxp-cli")
   .description("CLI tool for bundling, signing, and managing ZXP files")
-  .version("1.0.0");
+  .version(version);
 
 program
   .command("cert")

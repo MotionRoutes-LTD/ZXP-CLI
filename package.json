@@ -5,7 +5,7 @@
   "main": "dist/cli.js",
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "prepublishOnly": "npm run build"
   },
   "bin": {
     "zxp-cli": "dist/cli.js"

@@ -20,7 +20,7 @@
     "typescript": "^5.0.0"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://npm.pkg.github.com"
   },
   "author": "Motion Routes LTD",
   "license": "MIT"

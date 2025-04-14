@@ -5,7 +5,7 @@ A CLI tool for bundling, signing, and managing ZXP files.
 ## Installation
 
 ```bash
-npm install -g zxp-cli-tool
+npm install -g zxp-cli
 ```
 
 ## Usage

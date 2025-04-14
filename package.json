@@ -10,6 +10,10 @@
   "bin": {
     "zxp-cli": "dist/cli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MotionRoutes-LTD/ZXP-CLI"
+  },
   "dependencies": {
     "commander": "^10.0.0",
     "follow-redirects": "^1.15.9"

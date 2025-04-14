@@ -1,0 +1,24 @@
+{
+  "name": "zxp-cli-tool",
+  "version": "1.0.0",
+  "description": "CLI tool for bundling, signing, and managing ZXP files",
+  "main": "dist/cli.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "bin": {
+    "zxp-cli": "dist/cli.js"
+  },
+  "dependencies": {
+    "commander": "^10.0.0",
+    "follow-redirects": "^1.15.9"
+  },
+  "devDependencies": {
+    "@types/follow-redirects": "^1.14.4",
+    "jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

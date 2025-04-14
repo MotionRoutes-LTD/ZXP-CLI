@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { Command } from "commander";
 import { createCertificate } from "./commands/cert";
 import { signZXP } from "./commands/sign";

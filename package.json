@@ -1,6 +1,6 @@
 {
   "name": "zxp-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CLI tool for bundling, signing, and managing ZXP files",
   "main": "dist/cli.js",
   "scripts": {

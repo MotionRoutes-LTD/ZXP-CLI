@@ -6,6 +6,7 @@ import { copyZXPFile } from "./commands/copy";
 import { copySourceFolder } from "./commands/copyFolder";
 import { CommandOptions } from "./types";
 import { version } from "../package.json";
+import { config } from "./utils/config";
 
 const program = new Command();
 
@@ -46,4 +47,11 @@ program
     copySourceFolder(source, destination);
   });
 
+program
+  .command("config")
+  .description("Display the current configuration variables")
+  .action(() => {
+    console.log("Loaded Configuration:");
+    console.log(JSON.stringify(config, null, 2)); // Pretty-print the config object
+  });
 program.parse(process.argv);

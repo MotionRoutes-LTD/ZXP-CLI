@@ -30,3 +30,21 @@ This project is licensed under the MIT License.
 This tool includes `ZXPSignCmd`, which is licensed under the Apache License 2.0. For more information, see the [Adobe CEP Resources repository](https://github.com/Adobe-CEP/CEP-Resources).
 
 The `ZXPSignCmd` executable is bundled in the `bin/` directory of this tool.
+
+## Configuration
+
+You can configure the tool using environment variables. Create a `.env` file in your project directory with the following variables:
+
+```env
+ORGANIZATION=MyCompany
+USER_NAME=JohnDoe
+COUNTRY_CODE=US
+STATE_CODE=NY
+CERTIFICATE_NAME=my-cert.p12
+CERTIFICATE_PASSWORD=securepassword
+DESTINATION_DIRECTORY=output
+OUTPUT_ZXP_FILE=.build/my-app.zxp
+TARGET_DIR=C:\Custom\Adobe\Extensions
+```
+
+If no `.env` file is provided, the tool will use default values.

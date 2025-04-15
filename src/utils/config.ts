@@ -1,17 +1,23 @@
 import type { Config } from "../types";
 import { platform } from "os";
 import { join } from "path";
+import { config as dotenvConfig } from "dotenv";
+
+// Load .env variables
+dotenvConfig();
 
 export const config: Config = {
-  organization: "DemoCompany",
-  userName: "DemoUser",
-  countryCode: "GB",
-  stateCode: "JS",
-  certificateName: "code-sign2.p12",
-  certificatePassword: "12345678",
-  destinationDirectory: "src",
-  outputZXPFile: `.build/app.zxp`,
-  targetDir: "C:\\Program Files (x86)\\Common Files\\Adobe\\CEP\\extensions",
+  organization: process.env.ORGANIZATION || "MyOrganization",
+  userName: process.env.USER_NAME || "DefaultUser",
+  countryCode: process.env.COUNTRY_CODE || "US",
+  stateCode: process.env.STATE_CODE || "CA",
+  certificateName: process.env.CERTIFICATE_NAME || "certificate.p12",
+  certificatePassword: process.env.CERTIFICATE_PASSWORD || "",
+  destinationDirectory: process.env.DESTINATION_DIRECTORY || "dist",
+  outputZXPFile: process.env.OUTPUT_ZXP_FILE || `.build/output.zxp`,
+  targetDir:
+    process.env.TARGET_DIR ||
+    "C:\\Program Files (x86)\\Common Files\\Adobe\\CEP\\extensions",
 };
 
 export const zxpsignPath =

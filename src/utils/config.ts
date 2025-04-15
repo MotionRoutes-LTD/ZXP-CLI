@@ -13,7 +13,7 @@ export const config: Config = {
   stateCode: process.env.STATE_CODE || "CA",
   certificateName: process.env.CERTIFICATE_NAME || "certificate.p12",
   certificatePassword: process.env.CERTIFICATE_PASSWORD || "securepassword",
-  destinationDirectory: process.env.DESTINATION_DIRECTORY || "dist",
+  sourceDirectory: process.env.SOURCE_DIRECTORY || "src",
   outputZXPFile: process.env.OUTPUT_ZXP_FILE || `.build/output.zxp`,
   targetDir:
     process.env.TARGET_DIR ||

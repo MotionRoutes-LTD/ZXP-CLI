@@ -5,7 +5,7 @@ export interface Config {
   stateCode: string;
   certificateName: string;
   certificatePassword: string;
-  destinationDirectory: string;
+  sourceDirectory: string;
   outputZXPFile: string;
   targetDir: string;
 }

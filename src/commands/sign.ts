@@ -10,7 +10,7 @@ export function signZXP(password: string | undefined): void {
       config.sourceDirectory,
       config.outputZXPFile,
       config.certificateName,
-      password || config.certificatePassword,
+      password ?? config.certificatePassword,
       "-tsa",
       "http://timestamp.digicert.com",
     ];

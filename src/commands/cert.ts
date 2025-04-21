@@ -13,7 +13,7 @@ export async function createCertificate(
       config.stateCode,
       config.organization,
       config.userName,
-      password || config.certificatePassword,
+      password ?? config.certificatePassword,
       config.certificateName,
     ];
 

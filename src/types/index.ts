@@ -12,4 +12,5 @@ export interface Config {
 
 export interface CommandOptions {
   password?: string;
+  timeStampURL?: string;
 }

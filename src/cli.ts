@@ -27,8 +27,9 @@ program
   .command("sign")
   .description("Sign the ZXP file")
   .option("-p, --password <password>", "Certificate password")
+  .option("-t, --timeStampURL <url>", "Timestamp URL")
   .action((options: CommandOptions) => {
-    signZXP(options.password);
+    signZXP(options.password, options.timeStampURL);
   });
 
 program

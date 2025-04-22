@@ -7,6 +7,15 @@ export function signZXP(
   timeStampURL: string | undefined
 ): void {
   try {
+    // Check if the certificate file exists
+    if (!existsSync(config.certificateName)) {
+      console.error(
+        "Error: Certificate file does not exist. Please create a certificate first."
+      );
+      console.error('Run "zxp-cli cert" to create a certificate.');
+      process.exit(1);
+    }
+
     // Check if the source directory exists
     if (!existsSync(config.buildDirectory)) {
       console.log(`Source directory does not exist: ${config.buildDirectory}`);

@@ -6,7 +6,8 @@ export interface Config {
   certificateName: string;
   certificatePassword: string;
   sourceDirectory: string;
-  outputZXPFile: string;
+  buildDirectory: string;
+  zxpFileName: string;
   targetDir: string;
 }
 

@@ -14,7 +14,8 @@ export const config: Config = {
   certificateName: process.env.CERTIFICATE_NAME ?? "certificate.p12",
   certificatePassword: process.env.CERTIFICATE_PASSWORD ?? "securepassword",
   sourceDirectory: process.env.SOURCE_DIRECTORY ?? "src",
-  outputZXPFile: process.env.OUTPUT_ZXP_FILE ?? `.build/output.zxp`,
+  buildDirectory: process.env.BUILD_DIRECTORY ?? ".build",
+  zxpFileName: process.env.ZXP_FILE_NAME ?? `output.zxp`,
   targetDir:
     process.env.TARGET_DIR ??
     "C:\\Program Files (x86)\\Common Files\\Adobe\\CEP\\extensions",

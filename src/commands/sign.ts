@@ -1,17 +1,25 @@
 import { spawn } from "child_process";
 import { config, zxpsignPath } from "../utils/config";
+import { existsSync, mkdirSync } from "fs";
 
 export function signZXP(
   password: string | undefined,
   timeStampURL: string | undefined
 ): void {
   try {
+    // Check if the source directory exists
+    if (!existsSync(config.buildDirectory)) {
+      console.log(`Source directory does not exist: ${config.buildDirectory}`);
+      mkdirSync(config.buildDirectory, { recursive: true });
+      console.log(`Source directory created: ${config.buildDirectory}`);
+    }
+
     const signCommand: string[] = [
       "/c",
       zxpsignPath,
       "-sign",
       config.sourceDirectory,
-      config.outputZXPFile,
+      `${config.buildDirectory}/${config.zxpFileName}`,
       config.certificateName,
       password ?? config.certificatePassword,
     ];
